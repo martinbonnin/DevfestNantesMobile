@@ -79,12 +79,13 @@ extension AgendaViewModel {
             let id: String
             let abstract: String
             let category: shared.Category?
-            let language: SessionLanguage?
+            let language: String?
             let complexity: Complexity?
             let openFeedbackFormId: String
             let speakers: [Speaker]
             let room: String
             let date: Date
+            let duration: String
             let startDate: String
             let endDate: String
             let title: String

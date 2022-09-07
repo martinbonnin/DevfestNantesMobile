@@ -18,6 +18,7 @@
 		CB837AB6287B7D1200FEDAA1 /* AgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB837AB5287B7D1200FEDAA1 /* AgendaView.swift */; };
 		CB837AB8287B7D6500FEDAA1 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB837AB7287B7D6500FEDAA1 /* VenueView.swift */; };
 		CB837ABA287B7D9200FEDAA1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB837AB9287B7D9200FEDAA1 /* AboutView.swift */; };
+		CBE1A43128C8E42E00827483 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE1A43028C8E42E00827483 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CB837AB5287B7D1200FEDAA1 /* AgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaView.swift; sourceTree = "<group>"; };
 		CB837AB7287B7D6500FEDAA1 /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
 		CB837AB9287B7D9200FEDAA1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		CBE1A43028C8E42E00827483 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F2F2D5718F0FE661E81ECDD3 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				CB73E80328A549620014B9AF /* AgendaViewModel.swift */,
 				CB73E80F28A5587E0014B9AF /* AgendaDetailView.swift */,
 				CB3F424328A6A02300D1C75B /* AgendaCellView.swift */,
+				CBE1A43028C8E42E00827483 /* CategoryView.swift */,
 			);
 			path = Agenda;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				CB837AB6287B7D1200FEDAA1 /* AgendaView.swift in Sources */,
 				CB837ABA287B7D9200FEDAA1 /* AboutView.swift in Sources */,
 				CB73E81028A5587E0014B9AF /* AgendaDetailView.swift in Sources */,
+				CBE1A43128C8E42E00827483 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

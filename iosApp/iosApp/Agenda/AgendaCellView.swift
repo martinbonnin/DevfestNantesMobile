@@ -13,20 +13,6 @@ struct AgendaCellView: View {
     @ObservedObject var viewModel: AgendaViewModel
     var session: AgendaViewModel.Content.Session
     
-    var durationFormatter: DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
-        formatter.allowedUnits = [.minute]
-        return formatter
-    }()
-    
-    func getDate(date: String) -> Date {
-        let newFormatter = ISO8601DateFormatter()
-        return newFormatter.date(from: date) ?? Date()// replace Date String
-    }
-    
-    
-    
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
@@ -34,10 +20,15 @@ struct AgendaCellView: View {
                     .foregroundColor(.red)
                     .font(.headline)
                     .padding(.bottom, 4)
-                Text("\(durationFormatter.string(from: getDate(date: session.startDate) , to: getDate(date: session.endDate) )!)")
+                HStack {
+                    CategoryView(categoryLabel: session.category?.label ?? "cat")
+
+                    Text("\(session.duration) minutes / \(session.language!)")
                     .font(.footnote)
+                }
                 Text("\(session.room)")
                     .font(.footnote)
+
                 Text("\(session.language ?? SessionLanguage.english)")
                     .font(.footnote)
                 Text(session.speakers.map { $0.name }.joined(separator: ", "))
