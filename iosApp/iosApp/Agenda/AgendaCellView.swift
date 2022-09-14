@@ -23,7 +23,7 @@ struct AgendaCellView: View {
                 HStack {
                     CategoryView(categoryLabel: session.category?.label ?? "cat")
 
-                    Text("\(session.duration) minutes / \(session.language!)")
+                    Text("\(session.duration) minutes / \(session.language ?? .french)")
                     .font(.footnote)
                 }
                 Text("\(session.room)")

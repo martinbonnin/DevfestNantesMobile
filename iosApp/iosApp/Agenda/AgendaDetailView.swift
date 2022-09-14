@@ -49,7 +49,7 @@ struct AgendaDetailView: View {
                     .font(.headline)
                     .padding(.bottom, 8)
                 Divider().padding(.bottom, 8)
-                Text("\(content!.duration) minutes / \(content!.language!)")
+                Text("\(content!.duration) minutes / \(content!.language ?? .english)")
                 .font(.footnote)
                 HStack {
                     CategoryView(categoryLabel: content?.category?.label ?? "cat")
@@ -88,33 +88,34 @@ struct SpeakerView: View {
         
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
-            let url = URL(string: speaker.photoUrl ?? "https://fakeface.rest/thumb/view")
-            URLImage(url: url!) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipShape(Circle())
-            }.frame(width: 60, height: 60)
-            VStack(alignment: .leading) {
-                Text("\(speaker.name )"), \(speaker.company ?? "Company")")
-                    .bold()
-                    .padding(.vertical, 24)
-                Text(speaker.bio ?? "bio speaker")
-                    .padding(.trailing, 8)
-                HStack(alignment: .top, spacing: 20) {
-                    ForEach(speaker.socials!, id: \.self) { socialItem in
-                        Link(destination: URL(string: socialItem.link!)!) {
-                            if socialItem.type == .twitter {
-                                Image("ic_network_twitter")
-                            } else {
-                                Image("ic_network_web")
+                let url = URL(string: speaker.photoUrl ?? "https://fakeface.rest/thumb/view")
+                URLImage(url: url!) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipShape(Circle())
+                }.frame(width: 60, height: 60)
+                VStack(alignment: .leading) {
+                    Text("\(speaker.name ), \(speaker.company ?? "Company")")
+                        .bold()
+                        .padding(.vertical, 24)
+                    Text(speaker.bio ?? "bio speaker")
+                        .padding(.trailing, 8)
+                    HStack(alignment: .top, spacing: 20) {
+                        ForEach(speaker.socials!, id: \.self) { socialItem in
+                            Link(destination: URL(string: socialItem.link!)!) {
+                                if socialItem.type == .twitter {
+                                    Image("ic_network_twitter")
+                                } else {
+                                    Image("ic_network_web")
+                                }
                             }
                         }
                     }
                 }
             }
+            .padding(.vertical, 8)
         }
-        .padding(.vertical, 8)
     }
 }
 
