@@ -123,6 +123,6 @@ internal class GraphQLStore(private val apolloClient: ApolloClient) : DevFestNan
     }
 
     companion object {
-        const val VENUE_ID = "main"
+        private const val VENUE_ID = "main"
     }
 }

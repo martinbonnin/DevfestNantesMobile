@@ -110,6 +110,7 @@ object Firebase {
     const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics-ktx"
     const val firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx"
     const val firebaseConfig = "com.google.firebase:firebase-config-ktx"
+    const val firebaseFirestore = "dev.gitlive:firebase-firestore:1.6.2"
 
 }
 

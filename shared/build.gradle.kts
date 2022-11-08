@@ -38,6 +38,10 @@ kotlin {
                     implementation(apolloNormalizedCache)
                     implementation(apolloNormalizedCacheSqlite)
                 }
+
+                with(Firebase) {
+                    implementation(firebaseFirestore)
+                }
             }
         }
         val commonTest by getting {
