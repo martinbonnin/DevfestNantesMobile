@@ -24,7 +24,6 @@
 		CB179BF628D4C36A00BB9934 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB179BF528D4C36A00BB9934 /* Strings.swift */; };
 		CB3979D02919B78E00BDAE6F /* DevFest_NantesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3979CF2919B78E00BDAE6F /* DevFest_NantesTests.swift */; };
 		CB3F424428A6A02300D1C75B /* AgendaCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F424328A6A02300D1C75B /* AgendaCellView.swift */; };
-		CB4041DB291A764A000C3CCC /* MockDevFestNantesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4041DA291A764A000C3CCC /* MockDevFestNantesStore.swift */; };
 		CB46914329196228004C6120 /* Complexity-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46914229196228004C6120 /* Complexity-extension.swift */; };
 		CB46914529196271004C6120 /* SpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46914429196271004C6120 /* SpeakerView.swift */; };
 		CB4691472919661A004C6120 /* Bundle-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4691462919661A004C6120 /* Bundle-extension.swift */; };
@@ -80,7 +79,6 @@
 		CB3979CD2919B78E00BDAE6F /* DevFest NantesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DevFest NantesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3979CF2919B78E00BDAE6F /* DevFest_NantesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevFest_NantesTests.swift; sourceTree = "<group>"; };
 		CB3F424328A6A02300D1C75B /* AgendaCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCellView.swift; sourceTree = "<group>"; };
-		CB4041DA291A764A000C3CCC /* MockDevFestNantesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDevFestNantesStore.swift; sourceTree = "<group>"; };
 		CB46914229196228004C6120 /* Complexity-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Complexity-extension.swift"; sourceTree = "<group>"; };
 		CB46914429196271004C6120 /* SpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerView.swift; sourceTree = "<group>"; };
 		CB4691462919661A004C6120 /* Bundle-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-extension.swift"; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				CB3979CF2919B78E00BDAE6F /* DevFest_NantesTests.swift */,
-				CB4041DA291A764A000C3CCC /* MockDevFestNantesStore.swift */,
 			);
 			path = "DevFest NantesTests";
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB4041DB291A764A000C3CCC /* MockDevFestNantesStore.swift in Sources */,
 				CB3979D02919B78E00BDAE6F /* DevFest_NantesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
