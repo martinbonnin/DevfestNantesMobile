@@ -447,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DevFest Nantes/Pods-DevFest Nantes-frameworks.sh\"\n";
+			shellScript = "#\"${PODS_ROOT}/Target Support Files/Pods-DevFest Nantes/Pods-DevFest Nantes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BCCD527FE38A015A1F13232 /* [CP] Check Pods Manifest.lock */ = {
