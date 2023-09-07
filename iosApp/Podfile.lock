@@ -120,7 +120,7 @@ DEPENDENCIES:
   - Firebase/AnalyticsWithoutAdIdSupport
   - Firebase/Crashlytics
   - Firebase/RemoteConfig
-  - KMPNativeCoroutinesAsync
+  - KMPNativeCoroutinesAsync (= 0.12.5)
   - KMPNativeCoroutinesCombine (= 0.12.5)
   - NSLogger/Swift
   - shared (from `../shared`)
@@ -177,6 +177,6 @@ SPEC CHECKSUMS:
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
   URLImage: 36a66c03ba2a9ccbbf06bc83431f2cef171008e8
 
-PODFILE CHECKSUM: 4b8b3143385a1c73b7360392bebf210cd7092f17
+PODFILE CHECKSUM: 3df6fde082ecee2424f325bd49c69595fd3ab79a
 
 COCOAPODS: 1.12.1
