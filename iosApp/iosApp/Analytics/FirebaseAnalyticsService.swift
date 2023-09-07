@@ -110,6 +110,13 @@ class FirebaseAnalyticsService: AnalyticsService{
             ]
         )
     }
+
+    func eventSpeakerOpened(speakerId: String) {
+        Analytics.logEvent(AnalyticsEvent.speakerOpened.description(), parameters: [
+            AnalyticsParam.speakerId.description(): String(speakerId)
+            ]
+        )
+    }
     
     ///Method called when a speaker's social network is clicked.
     func eventSpeakerSocialLinkOpened(speakerId: String, type: SocialType) {
