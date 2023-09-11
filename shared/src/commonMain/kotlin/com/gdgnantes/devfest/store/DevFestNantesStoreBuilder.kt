@@ -1,6 +1,5 @@
 package com.gdgnantes.devfest.store
 
-import com.gdgnantes.devfest.store.graphql.GraphQLStore
 import com.gdgnantes.devfest.store.graphql.apolloClient
 
 class DevFestNantesStoreBuilder {
@@ -13,10 +12,6 @@ class DevFestNantesStoreBuilder {
     }
 
     fun build(): DevFestNantesStore {
-        return if (useMockServer) {
-            DevFestNantesStoreMocked()
-        } else {
-            GraphQLStore(apolloClient)
-        }
+            return DevFestNantesStore(apolloClient)
     }
 }

@@ -1,30 +1,6 @@
 package com.gdgnantes.devfest.store.graphql
 
-import com.apollographql.apollo3.ApolloClient
-import com.apollographql.apollo3.cache.normalized.FetchPolicy
-import com.apollographql.apollo3.cache.normalized.fetchPolicy
-import com.apollographql.apollo3.exception.ApolloException
-import com.gdgnantes.devfest.graphql.GetPartnerGroupsQuery
-import com.gdgnantes.devfest.graphql.GetRoomsQuery
-import com.gdgnantes.devfest.graphql.GetSessionQuery
-import com.gdgnantes.devfest.graphql.GetSessionsQuery
-import com.gdgnantes.devfest.graphql.GetSpeakersQuery
-import com.gdgnantes.devfest.graphql.GetVenueQuery
-import com.gdgnantes.devfest.model.Agenda
-import com.gdgnantes.devfest.model.ContentLanguage
-import com.gdgnantes.devfest.model.Partner
-import com.gdgnantes.devfest.model.PartnerCategory
-import com.gdgnantes.devfest.model.Room
-import com.gdgnantes.devfest.model.Session
-import com.gdgnantes.devfest.model.Speaker
-import com.gdgnantes.devfest.model.Venue
-import com.gdgnantes.devfest.model.stubs.buildVenueStub
-import com.gdgnantes.devfest.store.DevFestNantesStore
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
-
+/*
 internal class GraphQLStore(private val apolloClient: ApolloClient) : DevFestNantesStore {
     override val agenda: Flow<Agenda>
         get() = sessions.map { sessions ->
@@ -87,6 +63,7 @@ internal class GraphQLStore(private val apolloClient: ApolloClient) : DevFestNan
         }
     }
 
+    @NativeCoroutines
     override val sessions: Flow<List<Session>>
         get() = apolloClient.query(GetSessionsQuery())
             .fetchPolicy(FetchPolicy.CacheAndNetwork)
@@ -149,4 +126,4 @@ internal class GraphQLStore(private val apolloClient: ApolloClient) : DevFestNan
     companion object {
         const val VENUE_ID = "main"
     }
-}
+}*/

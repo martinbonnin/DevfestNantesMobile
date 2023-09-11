@@ -1,8 +1,9 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version Versions.kotlinVersion
     kotlin("native.cocoapods")
+    kotlin("plugin.serialization") version Versions.kotlinVersion
     id("com.android.library")
+    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
     id("com.rickclephas.kmp.nativecoroutines") version Versions.kmpNativeCoroutines
     id("com.apollographql.apollo3") version Apollo.apolloVersion
 }
@@ -10,7 +11,7 @@ plugins {
 version = "1.0"
 
 kotlin {
-    android()
+    androidTarget()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -22,6 +23,7 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
+            isStatic = true
         }
     }
     
@@ -46,7 +48,6 @@ kotlin {
             }
         }
         val androidMain by getting
-        val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -72,6 +73,10 @@ kotlin.targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarge
     binaries.all {
         binaryOptions["memoryModel"] = "experimental"
     }
+}
+
+kotlin.sourceSets.all {
+    languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
 }
 
 apollo {

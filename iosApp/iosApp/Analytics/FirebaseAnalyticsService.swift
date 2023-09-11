@@ -12,6 +12,10 @@ import Firebase
 import shared
 
 class FirebaseAnalyticsService: AnalyticsService{
+    func eventSpeakerOpened(speakerId: String) {
+        //TODO
+    }
+    
     
     ///Singleton FirebaseAnalytics
     static let shared = FirebaseAnalyticsService()

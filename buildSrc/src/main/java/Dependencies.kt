@@ -1,8 +1,8 @@
 object Versions {
-    const val kotlinVersion = "1.8.22"
+    const val kotlinVersion = "1.9.0"
 
-    const val kotlinCoroutines = "1.6.4"
-    const val kmpNativeCoroutines = "0.13.1"
+    const val kotlinCoroutines = "1.7.2"
+    const val kmpNativeCoroutines = "0.12.5"
     const val kotlinxDateTime = "0.4.0"
 
     const val googleServicesVersion = "4.3.13"
@@ -57,7 +57,7 @@ object Kotlinx {
     const val coroutinesCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
     const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDateTime}"
-    const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
+    const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0"
 }
 
 object Kotlin {

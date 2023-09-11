@@ -52,7 +52,7 @@ class DevFestViewModel: ObservableObject {
     ///Asynchronous method to retrieve sessions
     func observeSessions() async {
         do {
-            let stream = asyncStream(for: store.sessionsNative)
+            let stream = asyncSequence(for: store.sessions)
             for try await data in stream {
                 DispatchQueue.main.async {
                     self.sessionsChanged(sessions: data)
@@ -85,7 +85,7 @@ class DevFestViewModel: ObservableObject {
     func observeRooms() async {
         Task {
             do {
-                let stream = asyncStream(for: store.roomsNative)
+                let stream = asyncSequence(for: store)
                 for try await data in stream {
                     DispatchQueue.main.async {
                         self.roomsContent = Array(data)
@@ -102,7 +102,7 @@ class DevFestViewModel: ObservableObject {
     func observeVenue() async {
         Task {
             do {
-                let stream = asyncStream(for: self.store.getVenueNative(language: currentLanguage))
+                let stream = asyncFunction(for: store.getVenue(language: currentLanguage))
                 for try await data in stream {
                     DispatchQueue.main.async {
                         self.venueContent = VenueContent(from: data)
@@ -118,7 +118,7 @@ class DevFestViewModel: ObservableObject {
     ///Asynchronous method to retrieve partners
     func observePartners() async {
         do {
-            let stream = asyncStream(for: store.partnersNative)
+            let stream = asyncSequence(for: store.partners)
             for try await data in stream {
                 self.partnersContent = []
                 DispatchQueue.main.async {
